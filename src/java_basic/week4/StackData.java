@@ -1,6 +1,7 @@
 package java_basic.week4;
 
 public class StackData {
+
     int[] stackData;
     int stackSize;
     int currPos;
