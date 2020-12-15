@@ -11,7 +11,7 @@ public class homework01 {
     private static final int ISSUE_COUNT = 18;
 
     public static void main(String[] args) throws IOException {
-        GitHub github = new GitHubBuilder().withOAuthToken("be0173f1b1d69ba49d525ae42fd6603a15967eb9").build();
+        GitHub github = new GitHubBuilder().withOAuthToken("-").build();
         GHRepository repository = github.getRepository("tbnsok40/live-study").getSource();
         GHIssue issue;
         List<GHIssueComment> comments;
