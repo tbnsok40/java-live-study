@@ -6,12 +6,11 @@ import java.util.HashSet;
 import java.util.List;
 // 출력되는데 시간이 걸린다.
 // 각 주차를 모두 돌기 때문에 ISSUE_COUNT는 18
-//
 public class homework01 {
     private static final int ISSUE_COUNT = 18;
 
     public static void main(String[] args) throws IOException {
-        GitHub github = new GitHubBuilder().withOAuthToken("-").build();
+        GitHub github = new GitHubBuilder().withOAuthToken("-").build(); // 사용할 때 마다 토큰 발급 받아야한다.
         GHRepository repository = github.getRepository("tbnsok40/live-study").getSource();
         GHIssue issue;
         List<GHIssueComment> comments;
@@ -40,3 +39,5 @@ public class homework01 {
         hm.forEach((s, i) -> System.out.printf("%-20s -> %.2f%%\n", s, (i / (float)ISSUE_COUNT * 100)));
     }
 }
+
+// 오름차순 정렬,
